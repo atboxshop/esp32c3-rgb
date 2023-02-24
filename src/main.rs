@@ -13,6 +13,7 @@ use smart_leds::{
    hsv::{hsv2rgb, Hsv},
    SmartLedsWrite,
 };
+
 #[entry]
 fn main() -> ! {
     let peripherals = Peripherals::take();
@@ -72,7 +73,7 @@ fn main() -> ! {
             // that the output it's not too bright.
             led.write(brightness(gamma(data.iter().cloned()), 120))
                 .unwrap();
-            delay.delay_ms(20u8);
+            delay.delay_ms(10u8);
         }
     }
 }
