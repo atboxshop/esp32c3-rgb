@@ -70,7 +70,7 @@ fn main() -> ! {
             // When sending to the LED, we do a gamma correction first (see smart_leds
             // documentation for details) and then limit the brightness to 10 out of 255 so
             // that the output it's not too bright.
-            led.write(brightness(gamma(data.iter().cloned()), 10))
+            led.write(brightness(gamma(data.iter().cloned()), 120))
                 .unwrap();
             delay.delay_ms(20u8);
         }
